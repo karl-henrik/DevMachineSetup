@@ -1,4 +1,4 @@
-SetCapsLockState, AlwaysOff
+ï»¿SetCapsLockState, AlwaysOff
 
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
@@ -167,6 +167,7 @@ deleteVirtualDesktop()
     OutputDebug, [delete] desktops: %DesktopCount% current: %CurrentDesktop%
 }
 
+; Main
 ; CapsLock navigation
 Suspend On
 
@@ -180,9 +181,9 @@ l::right
 j::left
 i::up
 k::down
-å::{
+Ã¥::{
 SC01B::}
-^å::[
+^Ã¥::[
 ^SC01B::]
 ,::<
 .::>
@@ -191,5 +192,13 @@ SC01B::}
 1::switchDesktopByNumber(1)
 3::switchDesktopByNumber(3)
 4::switchDesktopByNumber(4)
+
 *CapsLock::Suspend Off
 *CapsLock Up::Suspend On
+
+;CapsLock & n::switchDesktopByNumber(CurrentDesktop + 1)
+;CapsLock & p::switchDesktopByNumber(CurrentDesktop - 1)
+;CapsLock & s::switchDesktopByNumber(CurrentDesktop + 1)
+;CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
+;CapsLock & c::createVirtualDesktop()
+;CapsLock & d::deleteVirtualDesktop()
