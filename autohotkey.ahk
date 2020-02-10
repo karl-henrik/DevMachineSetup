@@ -167,6 +167,14 @@ deleteVirtualDesktop()
     OutputDebug, [delete] desktops: %DesktopCount% current: %CurrentDesktop%
 }
 
+focusOnWindowsTerminal()
+{
+    if WinExist("ahk_exe WindowsTerminal.exe")
+        WinActivate ; use the window found above
+    else
+        Run, wt.exe
+}
+
 ; Main
 ; CapsLock navigation
 Suspend On
@@ -181,6 +189,7 @@ l::right
 j::left
 i::up
 k::down
+ö::focusOnWindowsTerminal()
 å::{
 SC01B::}
 ^å::[
