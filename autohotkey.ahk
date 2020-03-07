@@ -175,6 +175,14 @@ focusOnWindowsTerminal()
         Run, wt.exe
 }
 
+focusOnOutlook()
+{
+    if WinExist("ahk_exe OUTLOOK.EXE")
+        WinActivate ; use the window found above
+    else
+        Run, OUTLOOK.exe
+}
+
 ; Main
 ; CapsLock navigation
 Suspend On
@@ -190,6 +198,7 @@ j::left
 i::up
 k::down
 ö::focusOnWindowsTerminal()
+o::focusOnOutlook()
 å::{
 SC01B::}
 ^å::[
