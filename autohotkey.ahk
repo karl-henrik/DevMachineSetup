@@ -167,20 +167,19 @@ deleteVirtualDesktop()
     OutputDebug, [delete] desktops: %DesktopCount% current: %CurrentDesktop%
 }
 
-focusOnWindowsTerminal()
-{
-    if WinExist("ahk_exe WindowsTerminal.exe")
-        WinActivate ; use the window found above
+focusOnWindow(windowname, applicationToStart)
+{    
+    if WinExist(windowname)
+        WinActivate
     else
-        Run, wt.exe
+        Run, %applicationToStart%
 }
 
-focusOnOutlook()
+cycleTeamsWindows(windowName, groupname)
 {
-    if WinExist("ahk_exe OUTLOOK.EXE")
-        WinActivate ; use the window found above
-    else
-        Run, OUTLOOK.exe
+    GroupAdd, %groupname%, %windowName% ; Add only Internet Explorer windows to this group.
+GroupActivate, %groupname%, r
+
 }
 
 ; Main
@@ -197,8 +196,11 @@ l::right
 j::left
 i::up
 k::down
-ö::focusOnWindowsTerminal()
-o::focusOnOutlook()
+ö::focusOnWindow("ahk_exe WindowsTerminal.exe","wt.exe")
+o::focusOnWindow("ahk_exe OUTLOOK.EXE","OUTLOOK.exe")
+c::focusOnWindow("ahk_exe Code.exe", "Code.exe")
+b::cycleTeamsWindows("ahk_exe msedge.exe","MSED")
+t::cycleTeamsWindows("ahk_exe Teams.exe","TEAMS")
 å::{
 SC01B::}
 ^å::[
@@ -220,3 +222,17 @@ SC01B::}
 ;CapsLock & a::switchDesktopByNumber(CurrentDesktop - 1)
 ;CapsLock & c::createVirtualDesktop()
 ;CapsLock & d::deleteVirtualDesktop()
+
+;-Caption
+LWIN & LButton::
+WinSet, Style, -0xC00000, A
+return
+;
+
+;+Caption
+LWIN & RButton::
+WinSet, Style, +0xC00000, A
+return
+;
+
+SPACE::  Winset, Alwaysontop, , A
