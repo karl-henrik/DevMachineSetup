@@ -81,7 +81,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Karl-Henrik Nilsson - [@khnilsson](https://twitter.com/khnilsson)
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [Personal-autohotkey-settings](https://github.com/karl-henrik/personal-autohotkey-settings)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -105,8 +105,8 @@ If you are getting into Autohotkey scripting do checkout the boards, I am by no 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [issues-shield]: https://img.shields.io/github/issues/karl-henrik/personal-autohotkey-settings.svg?style=for-the-badge
 [issues-url]: https://github.com/karl-henrik/personal-autohotkey-settings/issues
-[license-shield]: https://img.shields.io/github/license/karl-henrik/personal-autohotkey-settings.svg?MIT
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
+[license-shield]: https://img.shields.io/github/license/karl-henrik/personal-autohotkey-settings.svg?style=for-the-badge
+[license-url]: https://github.com/karl-henrik/personal-autohotkey-settings/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
+[linkedin-url]: https://linkedin.com/in/khnilsson
 [product-screenshot]: images/screenshot.png
