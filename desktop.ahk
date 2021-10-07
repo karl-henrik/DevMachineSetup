@@ -2,10 +2,6 @@
 DesktopCount = 2        ; Windows starts with 2 desktops at boot
 CurrentDesktop = 1      ; Desktop count is 1-indexed (Microsoft numbers them this way)
 
-; DLL
-hVirtualDesktopAccessor := DllCall("LoadLibrary", "Str", A_ScriptDir . "\virtual-desktop-accessor.dll", "Ptr")
-global IsWindowOnDesktopNumberProc := DllCall("GetProcAddress", Ptr, hVirtualDesktopAccessor, AStr, "IsWindowOnDesktopNumber", "Ptr")
-
 ;
 ; This function examines the registry to build an accurate list of the current virtual desktops and which one we're currently on.
 ; Current desktop UUID appears to be in HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops
@@ -112,30 +108,7 @@ switchDesktopByNumber(targetDesktop)
         Send ^#{Left}
         CurrentDesktop--
         OutputDebug, [left] target: %targetDesktop% current: %CurrentDesktop%
-    }
-
-    Sleep, 50
-    focusTheForemostWindow(targetDesktop)
-}
-
-focusTheForemostWindow(targetDesktop) {
-    foremostWindowId := getForemostWindowIdOnDesktop(targetDesktop)
-    WinActivate, ahk_id %foremostWindowId%
-}
-
-getForemostWindowIdOnDesktop(n) {
-    n := n - 1 ; Desktops start at 0, while in script it's 1
-
-    ; winIDList contains a list of windows IDs ordered from the top to the bottom for each desktop.
-    WinGet winIDList, list
-    Loop % winIDList {
-        windowID := % winIDList%A_Index%
-        windowIsOnDesktop := DllCall(IsWindowOnDesktopNumberProc, UInt, windowID, UInt, n)
-        ; Select the first (and foremost) window which is in the specified desktop.
-        if (windowIsOnDesktop == 1) {
-            return windowID
-        }
-    }
+    }    
 }
 
 ;
