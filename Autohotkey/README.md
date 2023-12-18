@@ -1,37 +1,5 @@
-<div id="top"></div>
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://www.autohotkey.com/">
-    <img src="images/ahk_logo_no_text.svg" alt="Logo" width="180" height="120">
-  </a>
-
-  <h3 align="center">Karl-Henriks Autohotkey script</h3>
-
-  <p align="center">
-    This repository contains an AutoHotkey script designed to enhance productivity and streamline keyboard shortcuts. The script is developed for AutoHotkey v2.0 and offers various functionalities including custom keybindings for navigation, application switching, and more.
-    <br />
-<br/>    
-  </p>
-</div>
-
+## Overview
+This repository contains an AutoHotkey script designed to enhance productivity and streamline keyboard shortcuts. The script is developed for AutoHotkey v2.0 and offers various functionalities including custom keybindings for navigation, application switching, and more.
 
 ## Features
 - **Custom Keybindings:** Use the Caps Lock key in combination with other keys for quick navigation and actions.
