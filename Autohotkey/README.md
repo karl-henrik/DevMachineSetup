@@ -26,87 +26,52 @@
   <h3 align="center">Karl-Henriks Autohotkey script</h3>
 
   <p align="center">
-    A collection of quick key mappings for better productivity in Windows.
+    This repository contains an AutoHotkey script designed to enhance productivity and streamline keyboard shortcuts. The script is developed for AutoHotkey v2.0 and offers various functionalities including custom keybindings for navigation, application switching, and more.
     <br />
 <br/>    
   </p>
 </div>
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Script
+## Features
+- **Custom Keybindings:** Use the Caps Lock key in combination with other keys for quick navigation and actions.
+- **Application Switching:** Easily switch between or start common applications like Visual Studio Code, Microsoft Teams, Outlook, Windows Terminal, and Microsoft Edge.
+- **Keyboard Layout Adaptation:** Special function for adapting to English keyboard layout issues.
+- **Caps Lock Management:** Keeps the Caps Lock key always turned off to instead be used as a function key.
 
-This is a script written to avoid unnecessary movement of your hands when typing on the keyboard by mapping w a s d and i j k l to arrow keys and adding some additional functionality to avoid using the mouse. 
+## Requirements
+- AutoHotkey v2.0
 
-Current features:
-* Capslock + W A S D and I J K L mapped to arrow keys.
-* Capslock + å SC01B , . ' mapped to common programming characters such as { }, [ ] and < > 
-* Capslock + 1 2 3 4 mapped to switch between virtual desktops.
-* Capslock + T mapped to cycle Teams windows to easily switch between an open meeting and the normal teams client. 
-* Capslock + O mapped to cycle Outlook windows to easily switch between open Outlook windows. 
-* Capslock + B mapped to cycle open browser windows (EDGE) to easily switch between open browser windows. 
-* Capslock + Ö mapped to open/focus on Windows Terminal.
-* Capslock + C mapped to open/focus on Visual Studio Code.
+## Installation
+1. Ensure AutoHotkey v2.0 is installed on your system.
+2. Download the script from this repository.
+3. Run the script using AutoHotkey.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Usage
+After running the script, you can use the following key combinations:
 
-<!-- GETTING STARTED -->
-## Getting Started
+- **Navigation:**
+  - `CapsLock + W/A/S/D` or `CapsLock + I/J/K/L`: Arrow key functions (Up, Left, Down, Right).
+  - `CapsLock + 0`: Sends the degree symbol (°).
+  - `CapsLock + å/¨`: Adaptation for English keyboard layout issues with square brackets.
+  - `CapsLock + [/]`: Sends `{}` and `{}` respectively.
+  - `CapsLock + Down`: Activates the Apps key.
 
+- **Application Switching/Starting:**
+  - `CapsLock + C`: Switch to or start Visual Studio Code.
+  - `CapsLock + T`: Activate Microsoft Teams.
+  - `CapsLock + O`: Switch to or start Outlook.
+  - `CapsLock + Ö` or `CapsLock + SC027`: Switch to or start Windows Terminal.
+  - `CapsLock + B`: Switch to or start Microsoft Edge.
 
+## Customization
+You can customize the script by editing the key combinations and the paths to the applications according to your preferences and setup.
 
-### Installation
-
-Install [Autohotkey](https://www.autohotkey.com/) 
-
-My preferred way of installing Autohotkey is by using chocolatey 
-
-```sh
-choco install autohotkey
-```
-
-Then create a shortcut to the autohotkey.ahk file (if you associated .ahk files with Autohotkey) and place it in your startup folder to have it load everytime you start your computer. 
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Contributing
+Contributions to this project are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
 
 ## License
+This script is released under the MIT license, see LICENSE file for more details.
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- CONTACT -->
-## Contact
-
-Karl-Henrik Nilsson - [@khnilsson](https://twitter.com/khnilsson)
-
-Project Link: [Personal-autohotkey-settings](https://github.com/karl-henrik/personal-autohotkey-settings)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-If you are getting into Autohotkey scripting do checkout the boards, I am by no means an expert Autohotkey scripter but a lot of the scripts I have written started out as examples posted in these boards, they are truly very helpful. I would have included the links to the place where I got this code but I have been using this since around when Windows 7 came out and the old forums have been archived.. anyhow if you were an active member of these boards you have my thanks. 
-
-* [AutoHotkey Boards](https://www.autohotkey.com/boards/)
-* [AutoHotkey Docs](https://www.autohotkey.com/docs/AutoHotkey.htm)
-* [Othneil Drew Best README Template](https://github.com/othneildrew/Best-README-Template)
-* [Choose an Open Source License](https://choosealicense.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[issues-shield]: https://img.shields.io/github/issues/karl-henrik/personal-autohotkey-settings.svg?style=for-the-badge
-[issues-url]: https://github.com/karl-henrik/personal-autohotkey-settings/issues
-[license-shield]: https://img.shields.io/github/license/karl-henrik/personal-autohotkey-settings.svg?style=for-the-badge
-[license-url]: https://github.com/karl-henrik/personal-autohotkey-settings/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/khnilsson
-[product-screenshot]: images/screenshot.png
+## Disclaimer
+The author is not responsible for any issues caused by the use of this script. Please use it at your own risk.
