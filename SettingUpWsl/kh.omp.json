@@ -265,7 +265,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\ue285\ufb00 ",
+          "template": "\ue285 ",
           "type": "exit"
         }
       ],
