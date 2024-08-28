@@ -3,28 +3,44 @@
 SetCapsLockState "AlwaysOff"
 
 
-CapsLock & w:: Send("{Up}")
-CapsLock & a:: Send("{Left}")
-CapsLock & s:: Send("{Down}")
-CapsLock & d:: Send("{Right}")
+CapsLock & w::Up
+CapsLock & a::Left
+CapsLock & s::Down
+CapsLock & d::Right
 
-CapsLock & i:: Send("{Up}")
-CapsLock & j:: Send("{Left}")
-CapsLock & k:: Send("{Down}")
-CapsLock & l:: Send("{Right}")
+CapsLock & i::Up
+CapsLock & j::Left
+CapsLock & k::Down
+CapsLock & l::Right
+
+CapsLock & BackSpace::Delete
+
 CapsLock & 0:: Send("{U+00B0}")
 CapsLock & å:: EnglishKeyBoardFix("{{}","[")
 CapsLock & ¨:: EnglishKeyBoardFix("{}}","]")
-
 CapsLock & [:: Send("{{}")
 CapsLock & ]:: Send("{}}")
-CapsLock & Down:: AppsKey
+CapsLock & Down:: AppsKey 
+CapsLock & z::Send("<")
+CapsLock & x::Send(">")
 
+Escape::
+{
+    if(A_PriorHotkey != "Escape" or A_TimeSincePriorHotkey > 400)
+    {
+        KeyWait "Escape"
+        Hotkey("Escape", "Off") ; Temporarily disable the Escape hotkey
+        Send("{Escape}")
+        Hotkey("Escape", "On")  ; Re-enable the Escape hotkey
+        return
+    }
+    WinClose("A")
+}
 
 GroupAdd "VSCodeGroup", "ahk_exe Code.exe"
 CapsLock & c:: SwitchToOrStart("ahk_exe Code.exe","C:\Users\KarlHenrikNilsson\AppData\Local\Programs\Microsoft VS Code\Code.exe", "VSCodeGroup")
 
-GroupAdd "MSTeamsGroup", "ahk_exe Teams.exe"
+GroupAdd "MSTeamsGroup", "ahk_exe ms-teams.exe"
 CapsLock & t:: GroupActivate "MSTeamsGroup"
 
 GroupAdd "MSOutlookGroup", "ahk_exe olk.exe"
