@@ -2,12 +2,6 @@
 
 SetCapsLockState "AlwaysOff"
 
-
-CapsLock & w::Up
-CapsLock & a::Left
-CapsLock & s::Down
-CapsLock & d::Right
-
 CapsLock & i::Up
 CapsLock & j::Left
 CapsLock & k::Down
@@ -23,7 +17,7 @@ CapsLock & ]:: Send("{}}")
 CapsLock & Down:: AppsKey 
 CapsLock & z::Send("<")
 CapsLock & x::Send(">")
-
+CapsLock & F12::CloseOfficeApps()
 Escape::
 {
     if(A_PriorHotkey != "Escape" or A_TimeSincePriorHotkey > 400)
@@ -72,5 +66,12 @@ SwitchToOrStart(strSearch, strRunCommand, strGroupName)
     else
     {        
         GroupActivate strGroupName
+    }
+}
+
+CloseOfficeApps() {
+    apps := ["POWERPNT", "WINWORD", "EXCEL"]
+    for app in apps {
+        RunWait(A_ComSpec ' /c taskkill /IM ' app '.EXE /F',, "Hide")
     }
 }
