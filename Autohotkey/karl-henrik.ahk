@@ -47,6 +47,8 @@ CapsLock & SC027:: SwitchToOrStart("ahk_exe WindowsTerminal.exe","C:\Users\%user
 GroupAdd "MsEdgeGroup", "ahk_exe msedge.exe"
 CapsLock & b:: SwitchToOrStart("ahk_exe msedge.exe","C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe --profile-directory=Default","MsEdgeGroup")
 
+GroupAdd "VisualStudioGroup", "ahk_exe devenv.exe"
+CapsLock & v:: SwitchToOrStart("ahk_exe devenv.exe","C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\devenv.exe", "VisualStudioGroup")
 
 EnglishKeyBoardFix(strFirstMappedCharacter, strSecondMappedCharacter)
 {
