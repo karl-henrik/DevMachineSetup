@@ -6,7 +6,8 @@ $apps = @(
     @{ Name = "JanDeDobbeleer.OhMyPosh"; Override = $null },
     @{ Name = "Microsoft.PowerShell"; Override = $null },
     @{ Name = "Microsoft.VisualStudio.Enterprise.Insiders"; Override = $null },
-    @{ Name = "GitHub.cli"; Override = $null }
+    @{ Name = "GitHub.cli"; Override = $null },
+    @{ Name = "Docker.DockerDesktop"; Override = $null }
 )
 
 foreach ($app in $apps) {
