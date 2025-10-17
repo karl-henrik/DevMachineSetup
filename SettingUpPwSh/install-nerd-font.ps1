@@ -5,6 +5,16 @@ function Log([string]$msg, [string]$level = 'INFO') {
     Write-Host "[$ts] [$level] $msg"
 }
 
+# Check if FiraCode Nerd Font is already installed
+Add-Type -AssemblyName System.Drawing
+$fontCollection = New-Object System.Drawing.Text.InstalledFontCollection
+$fontFamilies = $fontCollection.Families
+$installed = $fontFamilies | Where-Object { $_.Name -like "*FiraCode*" }
+if ($installed) {
+    Log "FiraCode Nerd Font is already installed. Skipping installation."
+    exit
+}
+
 try {
     Log "Fetching latest Nerd Fonts release tag…"
     $data = Invoke-RestMethod -Uri "https://github.com/ryanoasis/nerd-fonts/releases/latest" `

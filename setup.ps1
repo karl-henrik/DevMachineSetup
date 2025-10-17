@@ -3,7 +3,10 @@ $apps = @(
     @{ Name = "Microsoft.VisualStudioCode"; Override = $null },
     @{ Name = "Microsoft.PowerToys"; Override = $null },
     @{ Name = "AutoHotkey.AutoHotkey"; Override = $null },
-    @{ Name = "JanDeDobbeleer.OhMyPosh"; Override = $null }
+    @{ Name = "JanDeDobbeleer.OhMyPosh"; Override = $null },
+    @{ Name = "Microsoft.PowerShell"; Override = $null },
+    @{ Name = "Microsoft.VisualStudio.Enterprise.Insiders"; Override = $null },
+    @{ Name = "GitHub.cli"; Override = $null }
 )
 
 foreach ($app in $apps) {
@@ -35,6 +38,11 @@ Set-Location -Path $PSScriptRoot
 # Run install.ps1 in the AutoHotkey directory
 Set-Location -Path "$PSScriptRoot\AutoHotkey"
 & .\install.ps1
+Set-Location -Path $PSScriptRoot
+
+# Install Nerd Font by running install-nerd-font.ps1 in SettingUpPwSh directory
+Set-Location -Path "$PSScriptRoot\SettingUpPwSh"
+& .\install-nerd-font.ps1
 Set-Location -Path $PSScriptRoot
 
 # Setup PwSh by running poshgit.sh in SettingUpPwSh directory
