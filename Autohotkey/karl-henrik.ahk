@@ -10,6 +10,12 @@ CapsLock & l::Right
 CapsLock & BackSpace::Delete
 
 CapsLock & 0:: Send("{U+00B0}")
+CapsLock & 1:: Send("^!#{1}")
+CapsLock & 2:: Send("^!#{2}")
+CapsLock & 3:: Send("^!#{3}")
+CapsLock & 4:: Send("^!#{4}")
+CapsLock & 5:: Send("^!#{5}")
+CapsLock & 6:: Send("^!#{6}")
 CapsLock & SC01A:: EnglishKeyBoardFix("{{}","[")
 CapsLock & SC01B:: EnglishKeyBoardFix("{}}","]")
 CapsLock & [:: Send("{{}")
